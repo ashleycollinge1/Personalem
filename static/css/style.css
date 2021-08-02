@@ -209,6 +209,7 @@ th, td {
 	background: white;
 	border-radius: 5px;
 	border-style: solid;
+	border: 5px;
 }
 
 .right-column-text {
