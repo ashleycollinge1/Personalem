@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+	<div class="middle">
+		<div class="container">
+			<main class="content">
+				<div class="title">{{ .Title }}</div>
+				<div class="post-metadata">{{ partial "metadata.html" . }}
+				{{ if eq .Params.type "post" }}{{ .Params.author }}
+				{{ end }}</div>
+				{{ if eq .Params.type "photo" }}
+					Camera: {{ .Params.camera }}
+					Resolution: {{ .Params.resolution }}
+					Exposure Time: {{ .Params.exposuretime }}
+					Focal Length: {{ .Params.focallength }}
+					F/stop: {{ .Params.fstop }}
+					ISO: {{ .Params.ISO }}
+				{{ end }}
+				{{ .Content }}
+			</main><!-- .content -->
+		</div><!-- .container-->
+	{{- partial "sidebar.html" . -}}
+	</div><!-- .middle-->
+
+
+{{ end }}

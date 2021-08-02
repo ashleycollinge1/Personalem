@@ -1,0 +1,39 @@
+<div class="wrapper">
+	<header class="header">
+	<img class="face-image" src="/img/face-image.jpg" alt="face image">
+	<h1 class="title">{{ .Site.Title }}</h1>
+	<br />
+	{{ range .Site.Menus.main }}
+        <a class="nav-link" href="{{ .URL }}">
+        {{ if .Pre }}
+        {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+        {{ $icon }}
+        {{ end }}
+        {{ $text := print .Name | safeHTML }}
+        {{ $text }}
+        </a>
+        {{ end }}
+		<div class="recentitemssection">
+{{ range first 4 ( where .Site.RegularPages "Type" "photo" ) }}
+
+<div class="recentitemscolumn">
+    <table>
+      <tr>
+        <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+      </tr>
+      <tr>
+        <td><i>{{ partial "metadata.html" . }}</i></td>
+      </tr>
+      <tr>
+        <td>{{ .Summary }}</td>
+      </tr>
+      <tr>
+        <td><img src="/images/thumbnails/{{ .Params.photo }}" width="125"></td>
+      </tr>
+    </table>
+  </div>
+
+{{ end }}
+  </div>
+	</header><!-- .header-->
+

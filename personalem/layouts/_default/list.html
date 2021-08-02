@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+	<div class="middle">
+		<div class="container">
+			<main class="content">
+				<div class="list">
+					<div class="list-title">{{ .Title }}</div><br />
+						{{ range .Pages.ByPublishDate.Reverse }}
+						<!-- Posts -->
+						{{ if eq .Params.type "post" }}
+							<a class="title" href="{{ .Permalink }}">{{ .Title }}</a><br />
+							{{ .Summary }}
+							{{ partial "metadata.html" . }}
+							<br />
+						{{ end }}
+						
+						<!-- Links -->
+						{{ if eq .Params.type "link" }}
+							<a class="title" href="{{ .Params.link }}">{{ .Title }}</a>
+							{{ .Summary }}
+						{{ end }}
+						
+						<!-- Photos -->
+						{{ if eq .Params.type "photo" }}
+						
+							<a class="title" href="{{ .Permalink }}">{{ .Title }}</a><br /><br />{{ .Summary }}<br />
+							<a class="title" href="{{ .Permalink }}"><img src="/images/thumbnails/{{ .Params.photo }}"></a><br />
+							<br />
+						{{ end }}
+						<br />
+						{{ end }}
+				</div>			
+			</main><!-- .content -->
+		</div><!-- .container-->
+	{{- partial "sidebar.html" . -}}
+	</div><!-- .middle-->
+
+	
+
+
+
+
+
+{{ end }}
