@@ -85,7 +85,7 @@ body::-webkit-scrollbar {
 	margin: 10px 0 0 15px;
   height: 5px;
   border-color: RGBA(219, 147, 16, 1);
-  color:RGBA(219, 147, 16, 1);
+  color:black;
   background-color:RGBA(219, 147, 16, 1);
   border-radius: 10px;
 }
