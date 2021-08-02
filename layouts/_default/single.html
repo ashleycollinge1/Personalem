@@ -19,26 +19,7 @@
 			</main><!-- .content -->
 		</div><!-- .container-->
 	{{- partial "sidebar.html" . -}}
-	{{ range first 4 ( where .Site.RegularPages "Type" "photo" ) }}
 
-	<div class="recentitemscolumn">
-		<table>
-		  <tr>
-			<td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
-		  </tr>
-		  <tr>
-			<td><i>{{ partial "metadata.html" . }}</i></td>
-		  </tr>
-		  <tr>
-			<td>{{ .Summary }}</td>
-		  </tr>
-		  <tr>
-			<td><img src="/images/thumbnails/{{ .Params.photo }}" width="125"></td>
-		  </tr>
-		</table>
-	  </div>
-	
-	{{ end }}
 	</div><!-- .middle-->
 
 
