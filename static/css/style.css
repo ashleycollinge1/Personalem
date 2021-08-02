@@ -150,6 +150,7 @@ th, td {
 	padding-bottom:20px;
 	color: black;
 	border: black;
+	border-radius: 5px;
 }
 
 .middle a{
