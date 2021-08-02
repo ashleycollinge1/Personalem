@@ -235,7 +235,7 @@ img {
 }
 
 html {
- background: url("/img/background.jpg")no-repeat center center fixed; 
+ background: white; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
