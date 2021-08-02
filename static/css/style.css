@@ -74,19 +74,19 @@ body::-webkit-scrollbar {
 .header {
 	margin-top: 10px;
 	height: 280px;
-	background: RGBA(50, 140, 193, 0.5);
+	background: white;
 	padding: 10px;
 	overflow: hidden;
 	border-radius: 20px 20px 0px 0px;
-	color: white;
+	color: black;
 }
 
 .header hr {
 	margin: 10px 0 0 15px;
   height: 5px;
   border-color: RGBA(219, 147, 16, 1);
-  color:black`;
-  background-color:white;
+  color:RGBA(219, 147, 16, 1);
+  background-color:RGBA(219, 147, 16, 1);
   border-radius: 10px;
 }
 
