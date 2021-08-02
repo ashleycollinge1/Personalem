@@ -148,7 +148,8 @@ th, td {
 	position: relative;
 	background: white; /* prussian blue */
 	padding-bottom:20px;
-	color: black;;
+	color: black;
+	border: black;
 }
 
 .middle a{
