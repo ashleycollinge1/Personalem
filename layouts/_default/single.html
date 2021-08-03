@@ -23,12 +23,25 @@
 					ISO: {{ .Params.ISO }}
 				{{ end }}
 				{{ .Content }}
-			</main><!-- .content -->
-		</div><!-- .container-->
-	
-
-	</div><!-- .middle--> -->
+			</main>-->
 
 	{{- partial "sidebar.html" . -}}
 
+	<div class="recent-items-section">
+		<div class="recent-items-title">
+			Recent Items
+		</div>
+	{{ range first 4 ( where .Site.RegularPages "Type" "photo" ) }}
+
+	<div class="recent-item">
+		<ul>
+			<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+			<li><a href=""><img src="/images/thumbnails/{{ .Params.photo }}" alt=""></a></li>
+			<li>{{ .Summary }}</li>
+		</ul>
+	</div>
+
+	
+	{{ end }}
+</div>
 {{ end }}
