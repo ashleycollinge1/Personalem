@@ -1,10 +1,6 @@
 {{ define "main" }}
-
-	<div class="middle">
-		<div class="container">
-			<main class="content">
-				<div class="list">
-					<div class="list-title">{{ .Title }}</div><br />
+<div class="main-content">
+	{{ .Title }}<br />
 						{{ range .Pages.ByPublishDate.Reverse }}
 						<!-- Posts -->
 						{{ if eq .Params.type "post" }}
@@ -29,16 +25,7 @@
 						{{ end }}
 						<br />
 						{{ end }}
+</div>
 				</div>			
-			</main><!-- .content -->
-		</div><!-- .container-->
 	{{- partial "sidebar.html" . -}}
-	</div><!-- .middle-->
-
-	
-
-
-
-
-
 {{ end }}
