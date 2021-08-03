@@ -16,18 +16,19 @@
                                 <li><a href="/public_cert.txt">91DC835E8B53F9B5</a></li>
                         </ul>
                 </div>
-                <h1 class="site-title">{{ .Site.Title }}</h1>
-                <br />
-                {{ range .Site.Menus.main }}
-                <a class="nav-link" href="{{ .URL }}">
-                {{ if .Pre }}
-                {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-                {{ $icon }}
-                {{ end }}
-                {{ $text := print .Name | safeHTML }}
-                {{ $text }}
-                </a>
-                {{ end }}
-
+                <div class="site-title">{{ .Site.Title }}</div>
+                <div class="navigation-bar">
+                        {{ range .Site.Menus.main }}
+                        <li>
+                        <a href="{{ .URL }}">
+                        {{ if .Pre }}
+                        {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+                        {{ $icon }}
+                        {{ end }}
+                        {{ $text := print .Name | safeHTML }}
+                        {{ $text }}
+                        </a></li>
+                        {{ end }}
+                </div>
                 </header><!-- .header-->
 
