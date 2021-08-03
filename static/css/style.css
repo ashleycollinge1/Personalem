@@ -126,6 +126,10 @@
     list-style: none;
 }
 
+.recent-items-section ul li img {
+    height: 100px;
+}
+
 .recent-items-section ul li a {
     color: black;
     text-decoration: none;

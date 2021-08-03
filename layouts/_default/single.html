@@ -31,7 +31,7 @@
 		<div class="recent-items-title">
 			Recent Items
 		</div>
-	{{ range first 3 }}
+	{{ range first 3 ( where .Site.RegularPages "Type" "photo" ) }}
 
 	<div class="recent-item">
 		<ul>
