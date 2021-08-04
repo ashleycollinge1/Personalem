@@ -1,5 +1,5 @@
 {{ define "main" }}
-redghrg
+{{ with .GetPage "cv.md" }}{{ .Title }}{{ end }}
 
 <!-- {{- partial "sidebar.html" . -}} -->
 
