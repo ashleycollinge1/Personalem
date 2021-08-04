@@ -21,6 +21,7 @@
       {{ $.Scratch.Set "curLetter" $firstChar }}
       <span class="letter">{{ $firstChar }}</span><br />
     {{ end }}
+    <br />
 
    <a href="{{ .Page.Permalink }}"> {{ .Page.Title }} ({{ .Count }})</a>
   {{ end }}
