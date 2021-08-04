@@ -1,14 +1,8 @@
 {{ define "main" }}
 <div class="main-content">
-	<div class="article-title">Deploying a static content website on GCP (Storage Bucket and Load Balancer)</div>
-	<div class="article-metadata">Ashley Collinge - 01/01/2021</div>
-	<div class="article-content">This will just go through the process of deploying a static content website to GCP, not making the website, can link through to a tutorial on making a new hugo theme for yourself
-
-		Create a new storage bucket, choose whatever settings are appropriate for you.
-		Allow public access to your bucket so the frontend load balancer can speak to it (might be a better way of doing this, maybe with a service account or something?)
-		Create a load balancer which will take your frontend requests and ferry them to the correct buckets and/or services.
-		Here you’ll also set up the SSL certs for your domains, you’ll need to point them at the correct IPs for the verification to work
-		Set up an SSL cert policy to make sure it’ll actually work</div>
+	<div class="article-title">{{ .Title }}</div>
+	<div class="article-metadata">{{ partial "metadata.html" . }}</div>
+	<div class="article-content">{{ .Content }}</div>
 
 				<!--<div class="title">{{ .Title }}</div>
 				<div class="post-metadata">{{ partial "metadata.html" . }}
