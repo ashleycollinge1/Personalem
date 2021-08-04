@@ -41,7 +41,7 @@
 				<li><a href=""><img src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
 				{{ end }}
 				<li>{{ .Summary }}</li>
-				<li>{{ .PublishDate.Format "2nd January 2006" }}</li>
+				<li>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05" }}</li>
 			</ul>
 		</div>
 		{{ end }}
