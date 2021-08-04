@@ -1,5 +1,8 @@
 {{ define "main" }}
-{{ with .GetPage "cv.md" }}{{ .Title }}{{ end }}
+{{ with .GetPage "cv.md" }}
+{{ .Title }}
+{{ .Content }}
+{{ end }}
 
 <!-- {{- partial "sidebar.html" . -}} -->
 
