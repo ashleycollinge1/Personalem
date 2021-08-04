@@ -32,7 +32,7 @@
 			Recent Items
 		</div>
 
-		{{ $related := (.Site.RegularPages .) | first 3 }}
+		{{ $related := .Site.RegularPages | first 3 }}
 		{{ range $related }}
 		1
 		{{ end }}
