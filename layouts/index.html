@@ -1,9 +1,12 @@
 {{ define "main" }}
 <div class="main-content">
-{{ with .GetPage "cv.md" }}
+    <div class="cv">
+        {{ with .GetPage "cv.md" }}
 <div class="article-title">{{ .Title }}</div>
 {{ .Content }}
 {{ end }}
+    </div>
+
 </div>
 <!-- {{- partial "sidebar.html" . -}} -->
 
