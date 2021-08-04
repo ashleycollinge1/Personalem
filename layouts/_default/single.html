@@ -34,13 +34,21 @@
 
 		{{ $related := .Site.RegularPages | first 3 }}
 		{{ range $related }}
-		{{ .Title }}
+		<div class="recent-item">
+			<ul>
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+				{{ if eq .Params.type "photo" }}
+				<li><a href=""><img src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
+				{{ end }}
+				<li>{{ .Summary }}</li>
+			</ul>
+		</div>
 		{{ end }}
 
 
 
 
-	{{ range first 3 ( where .Site.RegularPages "Type" "photo" ) }}
+	<!--{{ range first 3 ( where .Site.RegularPages "Type" "photo" ) }}
 
 	<div class="recent-item">
 		<ul>
@@ -53,6 +61,6 @@
 	</div>
 
 	
-	{{ end }}
+	{{ end }} -->
 </div>
 {{ end }}
