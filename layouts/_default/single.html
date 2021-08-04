@@ -41,7 +41,7 @@
 				<li><a href=""><img src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
 				{{ end }}
 				<li><div class="recent-item-summary">{{ .Summary }}</div></li>
-				<li>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05" }}</li>
+				<li><div class="recent-item-date">{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05" }}</div></li>
 			</ul>
 		</div>
 		{{ end }}
