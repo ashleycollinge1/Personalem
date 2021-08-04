@@ -22,7 +22,7 @@
       <span class="letter">{{ $firstChar }}</span><br />
     {{ end }}
 
-   <a class="badge badge-tag-list-page" href="{{ .Page.Permalink }}"><i class="fas fa-tags"></i> {{ .Page.Title }} ({{ .Count }})</a>
+   <a href="{{ .Page.Permalink }}"> {{ .Page.Title }} ({{ .Count }})</a>
   {{ end }}
 {{ end }}
 
