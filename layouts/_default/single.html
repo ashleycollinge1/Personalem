@@ -31,6 +31,15 @@
 		<div class="recent-items-title">
 			Recent Items
 		</div>
+
+		{{ $related := (where (.Site.RegularPages .) ) | first 3 }}
+		{{ range $related }}
+		1
+		{{ end }}
+
+
+
+
 	{{ range first 3 ( where .Site.RegularPages "Type" "photo" ) }}
 
 	<div class="recent-item">
