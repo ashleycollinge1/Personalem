@@ -1,3 +1,6 @@
+{{ define "main" }}
+<div class="main-content">
+
 {{ .Content }}
 
 <!-- create a list with all uppercase letters -->
@@ -21,4 +24,7 @@
 
    <a class="badge badge-tag-list-page" href="{{ .Page.Permalink }}"><i class="fas fa-tags"></i> {{ .Page.Title }} ({{ .Count }})</a>
   {{ end }}
+{{ end }}
+
+</div>
 {{ end }}
