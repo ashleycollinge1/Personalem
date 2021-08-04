@@ -145,3 +145,7 @@
 .recent-items-section ul li a:hover {
     text-decoration: underline;
 }
+
+.recent-item-summary {
+    font-size: 15px;
+}
