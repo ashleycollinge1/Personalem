@@ -34,7 +34,7 @@
 
 		{{ $related := .Site.RegularPages | first 3 }}
 		{{ range $related }}
-		1
+		{{ .Title }}
 		{{ end }}
 
 
