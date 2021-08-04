@@ -149,3 +149,8 @@
 .recent-item-summary {
     font-size: 15px;
 }
+
+.recent-item-date {
+    font-size: 15px;
+    font-style: italic;
+}
