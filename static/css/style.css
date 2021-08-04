@@ -79,7 +79,6 @@
     color: black;
     padding:20px;
     text-align: center;
-    width:100%;
 }
 
 .weird-column {
@@ -113,7 +112,8 @@
 .recent-items-section {
     padding: 10px;
     margin: 0 auto;
-    height: auto;
+    display: block;
+    overflow: auto;
 }
 
 .recent-items-title {
