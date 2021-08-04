@@ -113,7 +113,7 @@
 .recent-items-section {
     padding: 10px;
     margin: 0 auto;
-    height: 200px;
+    height: auto;
 }
 
 .recent-items-title {
