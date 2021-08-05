@@ -182,3 +182,9 @@
     font-size: 30px;
     font-weight: normal;
 }
+
+.cv h4 {
+    font-size: 15px;
+    padding: 0px 10px 10px 10px;
+    font-style: italic;
+}
