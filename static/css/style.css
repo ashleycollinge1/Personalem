@@ -159,9 +159,9 @@
 }
 
 .cv ul {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
     text-align: center;
   }
 
