@@ -197,6 +197,15 @@
     padding: 10px;
 }
 
+.list-article-title a {
+    color: black;
+    text-decoration: none;
+}
+
+.list-article-title a:hover {
+    text-decoration: underline;
+}
+
 .list-article-metadata {
 
 }
