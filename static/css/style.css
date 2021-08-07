@@ -191,3 +191,16 @@
     font-weight: normal;
     display: contents;
 }
+
+.list-article-title {
+    font-size: 35px;
+    padding: 10px;
+}
+
+.list-article-metadata {
+
+}
+
+.list-article-summary {
+
+}
