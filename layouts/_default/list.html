@@ -21,7 +21,7 @@
 						
 						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br /><br />
 							<div class="list-article-summary">{{ .Summary }}</div><br />
-							<a class="title" href="{{ .Permalink }}"><img src="/images/thumbnails/{{ .Params.photo }}"></a><br />
+							<a class="title" href="{{ .Permalink }}"><div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div></a><br />
 							<br />
 						{{ end }}
 						<br />
