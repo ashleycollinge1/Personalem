@@ -220,3 +220,10 @@
     padding: 0px 0px 0px 10px;
     display: inline;
 }
+
+.images-columns{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    text-align: center;
+}
