@@ -8,7 +8,7 @@
 						{{ if eq .Params.type "post" }}
 							<a class="title" href="{{ .Permalink }}">{{ .Title }}</a><br />
 							{{ .Summary }}
-							{{ partial "metadata.html" . }}
+							<div class=".article-metadata">{{ partial "metadata.html" . }}</div>
 							<br />
 						{{ end }}
 						
