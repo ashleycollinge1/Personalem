@@ -195,6 +195,7 @@
 .list-article-title {
     font-size: 35px;
     padding: 0px 0px 0px 10px;
+    display: inline;
 }
 
 .list-article-title a {
@@ -208,9 +209,9 @@
 }
 
 .list-article-metadata {
-    
+    padding: 0px 0px 0px 10px;
 }
 
 .list-article-summary {
-
+    padding: 0px 0px 0px 10px;
 }
