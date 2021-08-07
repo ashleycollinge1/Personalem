@@ -19,7 +19,8 @@
 						<!-- Photos -->
 						{{ if eq .Params.type "photo" }}
 						
-						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a><br /><br />{{ .Summary }}</div><br />
+						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br /><br />
+							<div class="list-article-summary">{{ .Summary }}</div><br />
 							<a class="title" href="{{ .Permalink }}"><img src="/images/thumbnails/{{ .Params.photo }}"></a><br />
 							<br />
 						{{ end }}
