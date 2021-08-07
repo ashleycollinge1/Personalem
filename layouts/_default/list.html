@@ -17,14 +17,16 @@
 						{{ end }}
 						
 						<!-- Photos -->
-						{{ if eq .Params.type "photo" }}
 						<div class="images-columns">
+						{{ if eq .Params.type "photo" }}
+						
 						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
 							<div class="list-article-summary"><p>{{ .Summary }}</p></div>
 							<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
 							<div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div>
-						</div>
+						
 						{{ end }}
+					</div>
 						<br />
 						{{ end }}
 						<div class="recent-items-section">
