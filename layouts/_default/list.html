@@ -19,9 +19,9 @@
 						<!-- Photos -->
 						{{ if eq .Params.type "photo" }}
 						
-						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br /><br />
-							<div class="list-article-summary">{{ .Summary }}</div><br />
-							<a class="title" href="{{ .Permalink }}"><div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div></a><br />
+						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
+							<div class="list-article-summary">{{ .Summary }}</div>
+							<a class="title" href="{{ .Permalink }}"><div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div></a>
 							<br />
 						{{ end }}
 						<br />
