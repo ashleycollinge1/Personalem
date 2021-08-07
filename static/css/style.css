@@ -200,6 +200,7 @@
 .list-article-title a {
     color: black;
     text-decoration: none;
+    font-size: 25px;
 }
 
 .list-article-title a:hover {
