@@ -12,6 +12,7 @@
   /* Track */
   body::-webkit-scrollbar-track {
     background: none; 
+    border-radius: 10px;
   }
    
   /* Handle */
