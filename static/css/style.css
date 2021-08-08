@@ -227,3 +227,10 @@
     -moz-columns: 2;
     text-align: center;
 }
+
+.tags-content {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    text-align: center;
+}
