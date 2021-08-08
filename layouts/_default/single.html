@@ -21,41 +21,5 @@
 
 	<!-- {{- partial "sidebar.html" . -}} -->
 
-	<div class="recent-items-section">
-		<div class="recent-items-title">
-			Recent Items
-		</div>
-
-		{{ $related := .Site.RegularPages | first 4 }}
-		{{ range $related }}
-		<div class="recent-item">
-			<ul>
-				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-				{{ if eq .Params.type "photo" }}
-				<li><a href="{{ .RelPermalink }}"><img src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
-				{{ end }}
-				<li><div class="recent-item-summary">{{ .Summary }}</div></li>
-				<li><div class="recent-item-date">{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05" }}</div></li>
-			</ul>
-		</div>
-		{{ end }}
-
-
-
-
-	<!--{{ range first 3 ( where .Site.RegularPages "Type" "photo" ) }}
-
-	<div class="recent-item">
-		<ul>
-			<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-			{{ if eq .Params.type "photo" }}
-			<li><a href=""><img src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
-			{{ end }}
-			<li>{{ .Summary }}</li>
-		</ul>
-	</div>
-
-	
-	{{ end }} -->
-</div>
+	{{- partial "recent-items.html" . -}}
 {{ end }}
