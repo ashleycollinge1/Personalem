@@ -69,6 +69,19 @@ body::-webkit-scrollbar {
     padding: 0px 10px 10px 10px;
 }
 
+.article-metadata a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.article-metadata a:hover {
+    text-decoration: underline;
+}
+
+.article-metadata a:visited {
+    color: #003366;
+}
+
 .article-content {
     font-size: 20px;
     padding: 10px;
@@ -279,19 +292,6 @@ pre {
 
 .list-article-metadata {
     padding: 0px 0px 0px 10px;
-}
-
-.list-article-metadata a {
-    color: #003366;
-    text-decoration: none;
-}
-
-.list-article-metadata a:hover {
-    text-decoration: underline;
-}
-
-.list-article-metadata a:visited {
-    color: #003366;
 }
 
 .list-article-summary {
