@@ -114,7 +114,7 @@ body::-webkit-scrollbar {
     margin: 0px;
 }
 
-.weird-column toc-title {
+.weird-column .toc-title {
     font-size:25px;
 }
 
