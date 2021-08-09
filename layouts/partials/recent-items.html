@@ -12,7 +12,7 @@
             <li><a href="{{ .RelPermalink }}"><img src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
             {{ end }}
             <li><div class="recent-item-summary">{{ .Summary }}</div></li>
-            <li><div class="recent-item-date">{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05" }}</div></li>
+            <li><div class="recent-item-date">{{ .PublishDate.Format "Mon, 02 Jan 2006" }}</div></li>
         </ul>
     </div>
     {{ end }}
