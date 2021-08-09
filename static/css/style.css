@@ -281,6 +281,10 @@ pre {
     padding: 0px 0px 0px 10px;
 }
 
+.list-article-metadata a {
+    color: #003366;
+}
+
 .list-article-summary {
     padding: 0px 0px 0px 10px;
 }
