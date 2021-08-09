@@ -2,7 +2,7 @@
 <div class="main-content">
 	<div class="article-title">{{ .Title }}</div>
 	<div class="article-metadata">{{ partial "metadata.html" . }}</div>
-	<div class="article-content">{{ .Content }}</div>
+	<div class="article-content">{{- partial "sidebar.html" . -}}{{ .Content }}</div>
 
 				<!--<div class="title">{{ .Title }}</div>
 				<div class="post-metadata">{{ partial "metadata.html" . }}
@@ -20,7 +20,7 @@
 			</main>-->
 
 	<!-- {{- partial "sidebar.html" . -}} -->
-	{{- partial "sidebar.html" . -}}
+	
 
 	{{- partial "recent-items.html" . -}}
 {{ end }}
