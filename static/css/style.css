@@ -283,6 +283,15 @@ pre {
 
 .list-article-metadata a {
     color: #003366;
+    text-decoration: none;
+}
+
+.list-article-metadata a:hover {
+    text-decoration: underline;
+}
+
+.list-article-metadata a:visited {
+    color: #003366;
 }
 
 .list-article-summary {
