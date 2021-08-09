@@ -43,14 +43,14 @@ body::-webkit-scrollbar {
 }
 
 .navigation-bar li a {
-    color: black;
+    color: #003366;
     text-decoration: none;
     text-align: center;
     padding: 30px;
 }
 
 .navigation-bar li a:hover {
-    color: black;
+    color: #003366;
     text-decoration: underline;
 }
 
