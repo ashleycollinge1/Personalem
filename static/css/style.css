@@ -43,14 +43,14 @@ body::-webkit-scrollbar {
 }
 
 .navigation-bar li a {
-    color: #003366;
+    color: black;
     text-decoration: none;
     text-align: center;
     padding: 30px;
 }
 
 .navigation-bar li a:hover {
-    color: #003366;
+    color: black;
     text-decoration: underline;
 }
 
@@ -72,6 +72,7 @@ body::-webkit-scrollbar {
 .article-metadata a {
     color: #003366;
     text-decoration: none;
+    padding: 0px 0px 0px 0px;
 }
 
 .article-metadata a:hover {
