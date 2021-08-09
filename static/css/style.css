@@ -114,10 +114,6 @@ body::-webkit-scrollbar {
     margin: 0px;
 }
 
-.weird-column .toc-title {
-    font-size:25px;
-}
-
 .weird-column li {
    padding: 0px 0px 0px 5px;
 }
@@ -129,6 +125,38 @@ body::-webkit-scrollbar {
 }
 
 .weird-column li a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.table-of-contents {
+    width: 200px;
+    float: right;
+    margin-right: 80px;
+    padding: 30px 10px 10px 10px;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0; /* To remove indent from bullet point */
+    margin: 0px;
+}
+
+.table-of-contents .toc-title {
+    font-size:25px;
+}
+
+.table-of-contents li {
+   padding: 0px 0px 0px 5px;
+}
+
+.table-of-contents li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px 5px 0px;
+}
+
+.table-of-contents li a:hover {
     text-decoration: underline;
     color: black;
 }
