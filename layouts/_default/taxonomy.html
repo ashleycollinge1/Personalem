@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="main-content">
 	
-	<div class="article-title">{{ .Title }}</div><br />
+	<div class="article-title">Tag - {{ .Title }}</div><br />
 						{{ range .Pages.ByPublishDate.Reverse }}
 						<!-- Posts -->
 						{{ if eq .Params.type "post" }}
