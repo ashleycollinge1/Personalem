@@ -1,26 +1,7 @@
-{{ define "main" }}
-<div class="main-content">
-	<div class="article-title">{{ .Title }}</div>
-	<div class="article-metadata">{{ partial "metadata.html" . }}</div>
-	<div class="article-content">{{- partial "sidebar.html" . -}}{{ .Content }}</div>
-
-				<!--<div class="title">{{ .Title }}</div>
-				<div class="post-metadata">{{ partial "metadata.html" . }}
-				{{ if eq .Params.type "post" }}{{ .Params.author }}
-				{{ end }}</div>
-				{{ if eq .Params.type "photo" }}
-					Camera: {{ .Params.camera }}
-					Resolution: {{ .Params.resolution }}
-					Exposure Time: {{ .Params.exposuretime }}
-					Focal Length: {{ .Params.focallength }}
-					F/stop: {{ .Params.fstop }}
-					ISO: {{ .Params.ISO }}
-				{{ end }}
-				{{ .Content }}
-			</main>-->
-
-	<!-- {{- partial "sidebar.html" . -}} -->
-	
-
-	{{- partial "recent-items.html" . -}}
-{{ end }}
+{{ range .Pages.ByPublishDate.Reverse }}
+						<!-- Posts -->
+						{{ if eq .Params.type "post" }}
+							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
+							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
+							<div class="article-metadata">{{ partial "metadata.html" . }}</div>
+						{{ end }}
