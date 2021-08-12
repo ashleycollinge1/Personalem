@@ -1,8 +1,34 @@
 {{ define "main" }}
-{{ range .Pages.ByPublishDate.Reverse }}
+<div class="main-content">
+	
+	<div class="article-title">{{ .Title }}</div><br />
+						{{ range .Pages.ByPublishDate.Reverse }}
 						<!-- Posts -->
+						{{ if eq .Params.type "post" }}
 							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
 							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
 							<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 						{{ end }}
-                        {{ end }}
+						
+						<!-- Links -->
+						{{ if eq .Params.type "link" }}
+						<div class="list-article-title"><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></div>
+						<div class="list-article-summary">{{ .Summary }}</div>
+						{{ end }}
+						
+						<!-- Photos -->
+						<div class="images-columns">
+						{{ if eq .Params.type "photo" }}
+						
+						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
+							<div class="list-article-summary"><p>{{ .Summary }}</p></div>
+							<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
+							<div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div>
+						
+						{{ end }}
+					</div>
+						<br />
+						{{ end }}
+						{{- partial "recent-items.html" . -}}
+</div>		
+{{ end }}
