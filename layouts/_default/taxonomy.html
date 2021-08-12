@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="main-content">
 	
-	<div class="article-title"><a href="">Tags</a> > {{ .Title }}</div><br />
+	<div class="article-title">{{ .Title }}</div><br />
 						{{ range .Pages.ByPublishDate.Reverse }}
 						<!-- Posts -->
 						{{ if eq .Params.type "post" }}
@@ -9,12 +9,7 @@
 							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
 							<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 						{{ end }}
-						
-						<!-- Links -->
-						{{ if eq .Params.type "link" }}
-						<div class="list-article-title"><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></div>
-						<div class="list-article-summary">{{ .Summary }}</div>
-						{{ end }}
+					
 						
 						<!-- Photos -->
 						<div class="images-columns">
