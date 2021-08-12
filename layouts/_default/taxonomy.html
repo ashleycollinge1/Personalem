@@ -1,3 +1,4 @@
+{{ define "main" }}
 {{ range .Pages.ByPublishDate.Reverse }}
 						<!-- Posts -->
 						{{ if eq .Params.type "post" }}
@@ -5,3 +6,5 @@
 							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
 							<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 						{{ end }}
+                        {{ end }}
+                        {{ end }}
