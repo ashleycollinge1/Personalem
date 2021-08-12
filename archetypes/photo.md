@@ -10,5 +10,6 @@ exposuretime: 0
 focallength: 0
 fstop: 0
 ISO: 0
+tags: []
 ---
 ![your image](/images/{{ replace .Name "-" " " | title }}.JPG)
