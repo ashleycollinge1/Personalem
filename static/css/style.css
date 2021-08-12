@@ -160,7 +160,7 @@ body::-webkit-scrollbar {
 .table-of-contents {
     width: 250px;
     float: right;
-    margin-right: 80px;
+    /*margin-right: 80px;*/
     padding: 9px 10px 10px 10px;
 }
 
