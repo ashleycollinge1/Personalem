@@ -1,6 +1,9 @@
 {{ define "main" }}
 <div class="main-content">
 	<div class="article-title">{{ .Title }}</div>
+	{{if .Params.draft }}
+	<div class="draft-box">Draft</div>
+	{{ end }}
 	<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 	<div class="article-content">{{- partial "sidebar.html" . -}}{{ .Content }}</div>
 
