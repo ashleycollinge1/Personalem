@@ -1,11 +1,11 @@
 {{ define "main" }}
-<div class="main-content">
-	<div class="article-title">{{ .Title }}</div>
-	{{if .Params.draft }}
+<div class="main-content">{{if .Params.draft }}
 	<div class="status-box draft">Draft</div>
 	{{ else }}
 	<div class="status-box published">Published</div>
 	{{ end }}
+	<div class="article-title">{{ .Title }}</div>
+	
 	<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 	<div class="article-content">{{- partial "sidebar.html" . -}}{{ .Content }}</div>
 
