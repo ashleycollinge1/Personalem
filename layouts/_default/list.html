@@ -6,10 +6,12 @@
 						<!-- Posts -->
 						{{ if eq .Params.type "post" }}
 							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+							{{ if in (string .Site.BaseURL) "localhost" }}
 							{{if .Params.draft }}
 							<div class="status-box draft">Draft</div>
 							{{ else }}
 							<div class="status-box published">Published</div>
+							{{ end }}
 							{{ end }}
 							<br />
 							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
