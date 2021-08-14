@@ -1,3 +1,6 @@
+{{if .Params.draft }}
+<div class="draft-box">Draft</div>
+{{ end }}
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
 <i data-feather="calendar"></i>

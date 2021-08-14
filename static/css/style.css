@@ -341,3 +341,10 @@ pre {
 .tags-content a:hover {
     text-decoration: underline;
 }
+
+.draft-box {
+    background-color: blue;
+    color: white;
+    width: 20px;
+    height: 20px;
+}
