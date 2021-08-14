@@ -351,10 +351,10 @@ pre {
     padding: 10px;
 }
 
-.status-box .draft {
+.status-box.draft {
     background-color: blue;
 }
 
-.status-box .published {
+.status-box.published {
     background-color: green;
 }
