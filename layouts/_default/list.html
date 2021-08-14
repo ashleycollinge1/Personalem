@@ -1,7 +1,9 @@
 {{ define "main" }}
 <div class="main-content">
 	
-	<div class="article-title">{{ .Title }}</div><br />
+	<div class="article-title">{{ .Title }}</div>	{{if .Params.draft }}
+	<div class="draft-box">Draft</div>
+	{{ end }}<br />
 						{{ range .Pages.ByPublishDate.Reverse }}
 						<!-- Posts -->
 						{{ if eq .Params.type "post" }}

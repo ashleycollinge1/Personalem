@@ -345,6 +345,7 @@ pre {
 .draft-box {
     background-color: blue;
     color: white;
-    width: 20px;
+    width: 100%;
     height: 20px;
+    display: inline;
 }
