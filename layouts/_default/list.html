@@ -7,7 +7,9 @@
 						{{ if eq .Params.type "post" }}
 							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
 							{{if .Params.draft }}
-							<div class="draft-box">Draft</div>
+							<div class="status-box draft">Draft</div>
+							{{ else }}
+							<div class="status-box published">Published</div>
 							{{ end }}
 							<br />
 							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
