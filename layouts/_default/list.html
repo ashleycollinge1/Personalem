@@ -1,13 +1,15 @@
 {{ define "main" }}
 <div class="main-content">
-	
-	<div class="article-title">{{ .Title }}</div>	{{if .Params.draft }}
-	<div class="draft-box">Draft</div>
-	{{ end }}<br />
+	<div class="article-title">{{ .Title }}</div>
+	<br />
 						{{ range .Pages.ByPublishDate.Reverse }}
 						<!-- Posts -->
 						{{ if eq .Params.type "post" }}
-							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
+							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+							{{if .Params.draft }}
+							<div class="draft-box">Draft</div>
+							{{ end }}
+							<br />
 							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
 							<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 						{{ end }}
