@@ -17,6 +17,12 @@
 							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
 							<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 						{{ end }}
+
+						<!-- Notes -->
+						{{ if eq .Params.type "note" }}
+						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+						<div class="list-article-summary">{{ .Summary }}</div>
+						{{ end }}
 						
 						<!-- Links -->
 						{{ if eq .Params.type "link" }}
