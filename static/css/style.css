@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 		0 1px 1px rgba(255,255,255,0.3);
 }
 
-.navigation-bar li a:after { background: #003366; }
+.navigation-bar li a:after:hover { background: #003366; }
 
 .navigation-bar li a {
     color: black;
