@@ -4,7 +4,9 @@
     </div>
 
 
-    {{ $remaining := .Site.RegularPages }} {{ $remaining = where $remaining eq .Params.type "post" }} 
+    {{ range first 4 (where .Data.Pages "Section" "in" (slice "photo" "post")) }}
+	{{ .Title }}
+    {{ end }}
 
 
     {{ $related := .Site.RegularPages | where .Params.type "photo" | first 4 }}
