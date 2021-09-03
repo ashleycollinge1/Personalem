@@ -66,11 +66,11 @@ body::-webkit-scrollbar {
     padding: 0px 15px 0px 15px;
 }
 
-.navigation-bar li a:hover {
+/*.navigation-bar li a:hover {
     color: black;
-    /*text-decoration: underline;*/
+    /*text-decoration: underline;
 
-}
+}*/
 
 .main-content {
     background-color: white;
