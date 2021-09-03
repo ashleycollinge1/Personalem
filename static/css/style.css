@@ -275,19 +275,6 @@ pre {
     font-weight: normal;
 }*/
 
-.cv h1 {
-    margin: 1em 0 .6em 0;
-	padding: 0 0 0 20px;
-	font-weight: normal;
-	color: blue;
-	font-family: 'Hammersmith One', sans-serif;
-	/*text-shadow: 0 -1px 0 rgba(0,0,0,0.4);*/
-	position: relative;
-	font-size: 18px;
-	line-height: 20px;
-	font-family: 'Questrial', sans-serif;
-}
-
 .cv h1:after {
 	position: absolute;
 	content: "";
@@ -302,6 +289,19 @@ pre {
 }
 
 .cv h1:after { background: #0AF; }
+
+.cv h1 {
+    margin: 1em 0 .6em 0;
+	padding: 0 0 0 20px;
+	font-weight: normal;
+	color: blue;
+	font-family: 'Hammersmith One', sans-serif;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+	position: relative;
+	font-size: 18px;
+	line-height: 20px;
+	font-family: 'Questrial', sans-serif;
+}
 
 .cv h2 {
     font-size: 30px;
