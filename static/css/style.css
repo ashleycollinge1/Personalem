@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
     position: relative;
 }
 
-.navigation-bar li a:after {
+.navigation-bar li a:hover, .navigation-bar li a:after {
     position: absolute;
 	content: "";
 	left: 0;
