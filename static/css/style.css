@@ -323,6 +323,40 @@ pre {
     display: contents;
 }
 
+.cv .job-name:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+	border-radius: 2px;
+	box-shadow: 
+		inset 0 1px 1px rgba(0,0,0,0.5), 
+		0 1px 1px rgba(255,255,255,0.3);
+}
+
+.cv .job-name:after { background: #003366; }
+
+.cv .job-name {
+    margin: 1em 0 .6em 0; /*1e 0 .6em 0;*/
+	padding: 5px 0 0 20px;
+    font-weight: normal;
+    color: black;
+    position: relative;
+    font-size: 30px;
+    line-height: 30px;
+}
+.cv .job-duration {
+    margin: 0 0 0 0;
+	padding: 0 0 0 0;
+    font-size: 15px;
+    font-weight: normal;
+    color: black;
+    position: relative;
+    /*display: contents;  contents */
+}
+
 .list-article-title {
     font-size: 35px;
     padding: 0px 0px 0px 10px;
