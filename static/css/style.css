@@ -78,8 +78,9 @@ body::-webkit-scrollbar {
 
 .article-title {
     font-size: 35px;
-    padding: 10px;
+    padding: 0px 0px 0px 20px;
     line-height: 37px;
+    position: relative;
 }
 
 .article-metadata {
