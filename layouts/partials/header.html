@@ -19,7 +19,7 @@
         <div class="navigation-bar">
                 <ul>
                         {{ range .Site.Menus.main }}
-                        {{ $active := in $current.RelPermalink .URL }}
+                        {{ $active = or $active (eq .Name $current.Title) }}
                         <li class="{{ if $active }}active{{ end }}">
                         <a href="{{ .URL }}">
                         {{ if .Pre }}
