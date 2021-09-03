@@ -23,7 +23,7 @@
           {{- $firstUrlElement := print "/" (index (split .URL "/") 1) -}}
                         {{ range .Site.Menus.main }}
                         
-                        <li class="{{if or ($.IsMenuCurrent "main" .) (eq ($firstUrlElement|lower) (.URL|lower)) }}active{{end}}">
+                        <li class="{{if or ($.IsMenuCurrent 'main' .) (eq ($firstUrlElement|lower) (.URL|lower)) }}active{{end}}">
                         <a href="{{ .URL }}">
                         {{ if .Pre }}
                         {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
