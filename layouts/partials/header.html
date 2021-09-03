@@ -19,7 +19,8 @@
         <div class="navigation-bar">
                 <ul>
                         {{ range .Site.Menus.main }}
-                        <li>
+                        {{ $active := in $current.RelPermalink .URL }}
+                        <li class="{{ if $active }}active{{ end }}">
                         <a href="{{ .URL }}">
                         {{ if .Pre }}
                         {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
