@@ -3,11 +3,6 @@
         Recent Items
     </div>
 
-
-
-
-
-    {{ $related := .Site.RegularPages | where .Params.type "photo" | first 4 }}
     {{ range first 4 (where .Data.Pages "Section" "in" (slice "photo" "post")) }}
     <div class="recent-item">
         <ul>
