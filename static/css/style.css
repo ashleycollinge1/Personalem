@@ -39,11 +39,7 @@ body::-webkit-scrollbar {
     padding: 0px 0px 0px 20px; /* To remove indent from bullet point */
 }
 
-.navigation-bar li {
-    float: left;
-}
-
-.navigation-bar li a:after {
+.navigation-bar li:after {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -56,7 +52,13 @@ body::-webkit-scrollbar {
 		0 1px 1px rgba(255,255,255,0.3);
 }
 
-.navigation-bar li a:after { background: #003366; }
+.navigation-bar li:after { background: #003366; }
+
+.navigation-bar li {
+    float: left;
+}
+
+
 
 .navigation-bar li a {
     color: black;
