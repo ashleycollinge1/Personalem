@@ -3,8 +3,12 @@
         Recent Items
     </div>
 
+
+    {{ $remaining := .Site.RegularPages }} {{ $remaining = where $remaining eq ".Params.type" "post" }} 
+
+
     {{ $related := .Site.RegularPages | where .Params.type "photo" | first 4 }}
-    {{ range $related }}
+    {{ range $remaining }}
     <div class="recent-item">
         <ul>
             <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
