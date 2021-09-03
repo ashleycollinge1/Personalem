@@ -318,9 +318,12 @@ pre {
 }
 
 .cv h2 {
+    margin: 1em 0 .6em 0;
+	padding: 0 0 0 20px;
     font-size: 30px;
+    line-height: 37px;
+    color: black;
     font-weight: normal;
-    display:table-cell;
 }
 
 .cv h4 {
