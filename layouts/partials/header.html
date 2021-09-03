@@ -18,12 +18,8 @@
         <div class="site-title">{{ .Site.Title }}</div>
         <div class="navigation-bar">
                 <ul>
-                        {{ $currentNode := . }}
-          <!-- apply active class to the current tab -->
-          {{- $firstUrlElement := print "/" (index (split .URL "/") 1) -}}
                         {{ range .Site.Menus.main }}
-                        
-                        <li class="{{if or ($.IsMenuCurrent 'main' .) (eq ($firstUrlElement|lower) (.URL|lower)) }}active{{end}}">
+                        <li>
                         <a href="{{ .URL }}">
                         {{ if .Pre }}
                         {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
