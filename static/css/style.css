@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
     position: relative;
 }
 
-.navigation-bar li a:after, .navigation-bar li a:hover {
+.navigation-bar li a:after {
     position: absolute;
 	content: "";
 	left: 0;
@@ -58,6 +58,10 @@ body::-webkit-scrollbar {
 }
 
 .navigation-bar li a:after { background: #003366; }
+
+.navigation-bar li a:hover {
+    line-height: 5px;
+}
 
 .navigation-bar li a {
     color: black;
