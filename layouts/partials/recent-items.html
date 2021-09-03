@@ -4,13 +4,11 @@
     </div>
 
 
-    {{ range first 4 (where .Data.Pages "Section" "in" (slice "photo" "post")) }}
-	{{ .Title }}
-    {{ end }}
+
 
 
     {{ $related := .Site.RegularPages | where .Params.type "photo" | first 4 }}
-    {{ range $remaining }}
+    {{ range first 4 (where .Data.Pages "Section" "in" (slice "photo" "post")) }}
     <div class="recent-item">
         <ul>
             <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
