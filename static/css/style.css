@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
 
 .navigation-bar ul {
     list-style: none;
-    padding: 0px 0px 0px 40px; /* To remove indent from bullet point */
+    padding: 0px 0px 0px 30px; /* To remove indent from bullet point */
 }
 
 .navigation-bar li {
