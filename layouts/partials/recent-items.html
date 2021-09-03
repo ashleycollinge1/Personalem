@@ -4,7 +4,7 @@
     </div>
 
 
-    {{ $remaining := .Site.RegularPages }} {{ $remaining = where $remaining ".Params.type" eq "post" }} 
+    {{ $remaining := .Site.RegularPages }} {{ $remaining = where $remaining eq .Params.type "post" }} 
 
 
     {{ $related := .Site.RegularPages | where .Params.type "photo" | first 4 }}
