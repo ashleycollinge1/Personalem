@@ -3,7 +3,7 @@
         Recent Items
     </div>
 
-    {{ $related := .Site.RegularPages | where .Site.Pages "post" "photo" | first 4 }}
+    {{ $related := where .Site.RegularPages "type" "photo" | first 4 }}
     {{ range $related }}
     <div class="recent-item">
         <ul>
