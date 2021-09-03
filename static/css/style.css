@@ -288,7 +288,7 @@ pre {
 		0 1px 1px rgba(255,255,255,0.3);
 }
 
-.cv h1:after {
+.cv h2:after {
 	position: absolute;
 	content: "";
 	left: 0;
