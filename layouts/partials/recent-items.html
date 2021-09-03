@@ -3,7 +3,7 @@
         Recent Items
     </div>
 
-    {{ range first 4 (where .Pages "Section" "in" (slice "photo" "post")) }}
+    {{ range first 4 (where .Site.RegularPages "Section" "in" (slice "photo" "post")) }}
     <div class="recent-item">
         <ul>
             <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
