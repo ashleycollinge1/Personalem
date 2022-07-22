@@ -1,4 +1,28 @@
-<body>
+<div class="row">
+        <div class="col-3">
+                <div class="row">
+                        {{ .Site.Title }}
+                </div>
+                <div class="row">
+                        <div class="navigation-bar">
+                                <ul>
+                                {{ range .Site.Menus.main }}
+                                <li>
+                                <a href="{{ .URL }}">
+                                {{ if .Pre }}
+                                {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+                                {{ $icon }}
+                                {{ end }}
+                                {{ $text := print .Name | safeHTML }}
+                                {{ $text }}
+                                </a></li>
+                                {{ end }}
+                                </ul>
+                        </div>
+                </div>
+        </div>
+</div>
+        
         <div class="header">
         <div class="face-image">
                 <img src="/img/face-image.jpg" alt="Photo Ashley Collinge's face">
@@ -16,20 +40,5 @@
                 </ul>
         </div>
         <div class="site-title">{{ .Site.Title }}</div>
-        <div class="navigation-bar">
-                <ul>
-                        {{ range .Site.Menus.main }}
-                        <li>
-                        <a href="{{ .URL }}">
-                        {{ if .Pre }}
-                        {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-                        {{ $icon }}
-                        {{ end }}
-                        {{ $text := print .Name | safeHTML }}
-                        {{ $text }}
-                        </a></li>
-                        {{ end }}
-                </ul>
-        </div>
-</div><!-- .header-->
 
+</div><!-- .header-->
