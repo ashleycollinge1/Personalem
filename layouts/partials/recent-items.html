@@ -7,20 +7,32 @@
 {{ range first 4 (where .Site.RegularPages "Section" "in" (slice "photo" "post")) }}
 
 <div class="row">
-    <div class="col-12 cv-content-style">
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a><div class="publish-date">{{ .PublishDate.Format "Mon, 02 Jan 2006" }}</div></h3>
-    </div>
-</div>
-<div class="row">
     <div class="col-12">
-        {{ .Summary }}
-    </div>
-</div>
+        <p><a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+            <i>{{ .PublishDate.Format "Mon, 02 Jan 2006" }}</i>
 
+        </p>
+        
         {{ if eq .Params.type "photo" }}
-        <li><a href="{{ .RelPermalink }}"><img height=100 width=100 src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
+        <div class="row">
+            <div class="col-6 force-col-6">
+                <a href="{{ .RelPermalink }}"><img height=100 width=150 src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a>
+            </div>
+            <div class="col-6 force-col-6">
+                {{ if eq .Params.type "photo" }}
+					Camera: {{ .Params.camera }}<br />
+					Resolution: {{ .Params.resolution }}<br />
+					Exposure Time: {{ .Params.exposuretime }}<br />
+					Focal Length: {{ .Params.focallength }}<br />
+					F/stop: {{ .Params.fstop }}<br />
+					ISO: {{ .Params.ISO }}<br />
+				{{ end }}
+            </div>
+        </div>
         {{ end }}
-        <li><div class="recent-item-summary"></div></li>
-        <li><div class="recent-item-date"></div></li>
-    </ul>
+<!--<div class="recent-item-summary"></div>
+<div class="recent-item-date"></div>-->
+
+</div>
+</div>
 {{ end }}
