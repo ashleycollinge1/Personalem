@@ -1,18 +1,26 @@
-<div class="recent-items-section">
-    <div class="recent-items-title">
-        Recent Items
+<div class="row">
+    <div class="col-12 cv-content-style">
+        <h1>Recent Posts</h1>
     </div>
-
-    {{ range first 4 (where .Site.RegularPages "Section" "in" (slice "photo" "post")) }}
-    <div class="recent-item">
-        <ul>
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ if eq .Params.type "photo" }}
-            <li><a href="{{ .RelPermalink }}"><img src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
-            {{ end }}
-            <li><div class="recent-item-summary">{{ .Summary }}</div></li>
-            <li><div class="recent-item-date">{{ .PublishDate.Format "Mon, 02 Jan 2006" }}</div></li>
-        </ul>
-    </div>
-    {{ end }}
 </div>
+
+{{ range first 4 (where .Site.RegularPages "Section" "in" (slice "photo" "post")) }}
+
+<div class="row">
+    <div class="col-12 cv-content-style">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a><div class="publish-date">{{ .PublishDate.Format "Mon, 02 Jan 2006" }}</div></h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        {{ .Summary }}
+    </div>
+</div>
+
+        {{ if eq .Params.type "photo" }}
+        <li><a href="{{ .RelPermalink }}"><img height=100 width=100 src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a></li>
+        {{ end }}
+        <li><div class="recent-item-summary"></div></li>
+        <li><div class="recent-item-date"></div></li>
+    </ul>
+{{ end }}

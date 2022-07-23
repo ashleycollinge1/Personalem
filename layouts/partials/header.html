@@ -1,10 +1,10 @@
 <div class="row">
-        <div class="col-3">
-                <div class="row">
+        <div class="col-8">
+                <div class="row site-title">
                         {{ .Site.Title }}
                 </div>
                 <div class="row">
-                        <div class="navigation-bar">
+                        <div class="navigation-bar nav-bar">
                                 <ul>
                                 {{ range .Site.Menus.main }}
                                 <li>
@@ -21,14 +21,11 @@
                         </div>
                 </div>
         </div>
-</div>
-        
-        <div class="header">
-        <div class="face-image">
-                <img src="/img/face-image.jpg" alt="Photo Ashley Collinge's face">
+        <div class="col-2 face-image">
+                <img style="border-radius: 50%;" src="/img/face-image.jpg" alt="Photo Ashley Collinge's face">
         </div>
-        <div class="weird-column">
-                <ul>
+        <div class="col-2 ">
+                <ul class="no-list-style">
                         <li>email</li>
                         <li><a href="mailto:me@ashleycollinge.co.uk">me@ashleycollinge.co.uk</a></li>
                         <li>LinkedIn</li>
@@ -39,6 +36,4 @@
                         <li><a href="/public/publickey.txt">91DC835E8B53F9B5</a></li>
                 </ul>
         </div>
-        <div class="site-title">{{ .Site.Title }}</div>
-
-</div><!-- .header-->
+</div>

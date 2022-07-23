@@ -1,14 +1,14 @@
 {{ define "main" }}
-<div class="main-content">
-    
+   
         {{ with .GetPage "cv.md" }}
-<div class="article-title">{{ .Title }}</div>
-<div class="cv">
-{{ .Content }}
+        <div class="row">
+            <div class="col-12 cv-content-style">
+                {{ .Content }}
+            </div>
+
+        </div>
 {{ end }}
-    </div>
 {{- partial "recent-items.html" . -}}
-</div>
 <!-- {{- partial "sidebar.html" . -}} -->
 
 {{ end }}
