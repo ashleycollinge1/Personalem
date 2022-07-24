@@ -86,6 +86,7 @@ img {
     text-decoration: none;
     text-align: center;
     padding: 0px 10px 0px 10px;
+    font-size: 1em;
 }
 
 .no-list-style {
@@ -96,7 +97,7 @@ img {
 }
 
 .footer {
-    font-size: 15px;
+    font-size: 1em;
     color: black;
     padding: 10px 0px 10px 0px;
     text-align: center;
@@ -147,7 +148,7 @@ img {
 	/*font-family: 'Hammersmith One', sans-serif;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);*/
 	position: relative;
-	font-size: 35px;
+	font-size: 2.1875em;
 	line-height: 37px;
 	/*font-family: 'Questrial', sans-serif;*/
 }
@@ -158,7 +159,7 @@ img {
     font-weight: normal;
     color: #003366;
     position: relative;
-    font-size: 30px;
+    font-size: 1.875em;
     line-height: 37px;
 }
 
@@ -168,7 +169,7 @@ img {
     font-weight: normal;
     color: #003366;
     position: relative;
-    font-size: 18.72px;
+    font-size: 1.17em;
     line-height: 37px;
 }
 
@@ -235,7 +236,7 @@ pre {
     color: #666;
     page-break-inside: avoid;
     font-family: monospace;
-    font-size: 15px;
+    font-size: 1em;
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
@@ -261,13 +262,63 @@ pre {
     .force-col-6 {width: 50%;}
     a {text-decoration: underline;}
     a:hover {text-decoration: none;}
-    .meta-info-padding {padding: 15px 0px 0px 0px;}
+    .meta-info {
+        padding: 15px 0px 0px 0px;
+    font-size:1em;}
     
 }
 
-@media only screen and (min-width: 600px) {}
+/*@media only screen and (min-width: 600px) {} */
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+        height: 100%;
+    }
+    .force-col-6 {width: 50%;}
+    .site-title{
+        font-size: 5em;
+    }
+
+    .footer {
+        font-size: 1.25em;
+    }
+    .cv-content-style h1 {
+        font-size: 3em;
+	    line-height: 1em;
+    }
+    .cv-content-style h2 {
+        font-size: 2.25em;
+        line-height: 1em;
+    }
+    .cv-content-style h3 {
+        font-size: 1.7em;
+        line-height: 1em;
+    }
+    .cv-content-style .job-duration {
+        font-size: 0.5em;
+    }
+    .cv-content-style .publish-date {
+        font-size: 0.75em;
+    }
+    pre {
+        font-size: 1.5em;
+        line-height: 1.6;
+    }
+    .article-metadata {
+        font-size: 0.8em;}
+    .nav-bar li a {
+        font-size: 1.5em;
+    }
+    .meta-info{
+        font-size:1.5em;
+        padding: 90px 0px 0px 0px;
+    }
+    p {
+        font-size:1.5em;
+    }
+
+} 
 
 @media only screen and (min-width: 992px) {
 }
