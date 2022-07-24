@@ -1,8 +1,17 @@
 {{ if and (gt .WordCount 400 ) (.Params.toc) }}
-<div class="table-of-contents">
-	<div class="toc-title">Table of Contents</div>
-	{{ .TableOfContents }}
-
+<div class="row">
+	<div class="col-12 table-of-contents box">
+		<div class="row table-of-contents header">
+			<div class="col-12">
+				Table of Contents
+			</div>
+		</div>
+		<div class="row" style="background-color:lightgray;">
+			<div class="col-12 table-of-contents list">
+				{{ .TableOfContents }}
+			</div>
+		</div>
+	</div>
 </div>
 {{ end }}
 

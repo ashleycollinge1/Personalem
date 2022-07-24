@@ -27,6 +27,10 @@ body::-webkit-scrollbar {
     /*padding: 0px 0px 20px 20px;*/
 }
 
+img {
+    width: 100%;
+}
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -196,6 +200,28 @@ a:visited {
     color: #003366;
 }
 
+.table-of-contents.box {
+    padding: 10px 0px 0px 0px;
+}
+
+.table-of-contents.header {
+background-color: #003366;
+color: white;
+}
+
+.table-of-contents.title {
+    color: white;
+}
+
+.table-of-contents.list nav ol {
+    padding: 0px 0px 0px 15px;
+    margin: 5px 0px 10px 0px;
+}
+
+.table-of-contents.list nav ol li {
+    padding: 5px 0px 5px 0px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -209,6 +235,7 @@ a:visited {
     .force-col-6 {width: 50%;}
     a {text-decoration: underline;}
     a:hover {text-decoration: none;}
+    .meta-info-padding {padding: 15px 0px 0px 0px;}
     
 }
 

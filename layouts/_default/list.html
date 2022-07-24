@@ -1,48 +1,55 @@
 {{ define "main" }}
-<div class="main-content">
-	<div class="article-title">{{ .Title }}</div>
-	<br />
-						{{ range .Pages.ByPublishDate.Reverse }}
-						<!-- Posts -->
-						{{ if eq .Params.type "post" }}
-							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
-							{{ if in (string .Site.BaseURL) "localhost" }}
-							{{if .Params.draft }}
-							<div class="status-box draft">Draft</div>
-							{{ else }}
-							<div class="status-box published">Published</div>
-							{{ end }}
-							{{ end }}
-							<br />
-							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
-							<div class="article-metadata">{{ partial "metadata.html" . }}</div>
-						{{ end }}
+<div class="row">
+	<div class="col-12 cv-content-style">
+		<h1>{{ .Title }}</h1>
+	</div>
+</div>
 
-						<!-- Notes -->
-						{{ if eq .Params.type "note" }}
-						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
-						<div class="list-article-summary">{{ .Summary }}</div>
-						{{ end }}
-						
-						<!-- Links -->
-						{{ if eq .Params.type "link" }}
-						<div class="list-article-title"><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></div>
-						<div class="list-article-summary">{{ .Summary }}</div>
-						{{ end }}
-						
-						<!-- Photos -->
-						<div class="images-columns">
-						{{ if eq .Params.type "photo" }}
-						
-						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
-							<div class="list-article-summary"><p>{{ .Summary }}</p></div>
-							<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
-							<div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div>
-						
-						{{ end }}
-					</div>
-						<br />
-						{{ end }}
-						{{- partial "recent-items.html" . -}}
-</div>		
+<div class="row">
+	<div class="col-12">
+		{{ range .Pages.ByPublishDate.Reverse }}
+		<!-- Posts -->
+		{{ if eq .Params.type "post" }}
+			<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+			{{ if in (string .Site.BaseURL) "localhost" }}
+			{{if .Params.draft }}
+			<div class="status-box draft">Draft</div>
+			{{ else }}
+			<div class="status-box published">Published</div>
+			{{ end }}
+			{{ end }}
+			<br />
+			<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
+			<div class="article-metadata">{{ partial "metadata.html" . }}</div>
+		{{ end }}
+
+		<!-- Notes -->
+		{{ if eq .Params.type "note" }}
+		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+		<div class="list-article-summary">{{ .Summary }}</div>
+		{{ end }}
+		
+		<!-- Links -->
+		{{ if eq .Params.type "link" }}
+		<div class="list-article-title"><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></div>
+		<div class="list-article-summary">{{ .Summary }}</div>
+		{{ end }}
+		
+		<!-- Photos -->
+		<div class="images-columns">
+		{{ if eq .Params.type "photo" }}
+		
+		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
+			<div class="list-article-summary"><p>{{ .Summary }}</p></div>
+			<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
+			<div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div>
+		
+		{{ end }}
+	</div>
+		<br />
+		{{ end }}
+	</div>
+</div>
+
+{{- partial "recent-items.html" . -}}
 {{ end }}

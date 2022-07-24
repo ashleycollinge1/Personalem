@@ -1,8 +1,13 @@
 {{ define "main" }}
-<div class="main-content">
-<div class="article-title">{{ .Title }}</div>
-<div class="tags-content">
-{{ .Content }}
+
+<div class="row">
+	<div class="col-12 cv-content-style">
+		<h1>{{ .Title }}</h1>
+	</div>
+</div>
+<div class="row">
+  <div class="col-12 cv-content-style">
+    {{ .Content }}
 
 <!-- create a list with all uppercase letters -->
 {{ $letters := split "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
@@ -20,13 +25,17 @@
     {{ if ne $firstChar $curLetter }}
     <!-- update the current letter and print it -->
       {{ $.Scratch.Set "curLetter" $firstChar }}
-      <br /><span class="letter">{{ $firstChar }}</span><br />
+      <br /><h3>{{ $firstChar }}</h3><br />
     {{ end }}
     <br />
 
    <a href="{{ .Page.Permalink }}"> {{ .Page.Title }} ({{ .Count }})</a><br />
   {{ end }}
 {{ end }}
+
 </div>
 </div>
 {{ end }}
+
+
+

@@ -1,16 +1,26 @@
 {{ define "main" }}
-<div class="main-content">
 
-	<div class="article-title">{{ .Title }}</div>	{{ if in (string .Site.BaseURL) "localhost" }}
-	{{if .Params.draft }}
-	<div class="status-box draft">Draft</div>
-	{{ else }}
-	<div class="status-box published">Published</div>
-	{{ end }}
-	{{ end }}
+<div class="row">
+	<div class="col-12 cv-content-style">
+		<h1>{{ .Title }}</h1>
+		{{ if in (string .Site.BaseURL) "localhost" }}
+		{{if .Params.draft }}
+		Draft
+		{{ else }}
+		Published
+		{{ end }}
+		{{ end }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-12 cv-content-style">
+		{{ partial "metadata.html" . }}
+		{{- partial "sidebar.html" . -}}{{ .Content }}
+	</div>
+</div>
 	
-	<div class="article-metadata">{{ partial "metadata.html" . }}</div>
-	<div class="article-content">{{- partial "sidebar.html" . -}}{{ .Content }}</div>
+
 
 				<!--<div class="title">{{ .Title }}</div>
 				<div class="post-metadata">{{ partial "metadata.html" . }}
@@ -29,6 +39,6 @@
 
 	<!-- {{- partial "sidebar.html" . -}} -->
 	
-
-	{{- partial "recent-items.html" . -}}
+	
+{{- partial "recent-items.html" . -}}		
 {{ end }}
