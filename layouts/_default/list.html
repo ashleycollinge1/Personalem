@@ -27,6 +27,11 @@
 		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
 		<div class="list-article-summary">{{ .Summary }}</div>
 		{{ end }}
+
+		{{ if eq .Params.type "video" }}
+		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+		<div class="list-article-summary">{{ .Summary }}</div>
+		{{ end }}
 		
 		<!-- Links -->
 		{{ if eq .Params.type "link" }}

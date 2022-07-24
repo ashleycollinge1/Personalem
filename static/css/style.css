@@ -82,7 +82,7 @@ img {
 .nav-bar li a:after { background: #003366; }
 
 .nav-bar li a {
-    color: black;
+    color: #003366;
     text-decoration: none;
     text-align: center;
     padding: 0px 10px 0px 10px;
@@ -100,7 +100,6 @@ img {
     color: black;
     padding: 10px 0px 10px 0px;
     text-align: center;
-    background-color:#999999;
 }
 
 .footer a {
@@ -144,7 +143,7 @@ img {
     /*margin: 1em 0 .6em 0;*/
 	padding: 0 0 0 20px;
 	font-weight: normal;
-	color: black;
+	color: #003366;
 	/*font-family: 'Hammersmith One', sans-serif;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);*/
 	position: relative;
@@ -157,7 +156,7 @@ img {
     margin: 1em 0 .6em 0;
 	padding: 0 0 0 20px;
     font-weight: normal;
-    color: black;
+    color: #003366;
     position: relative;
     font-size: 30px;
     line-height: 37px;
@@ -167,7 +166,7 @@ img {
     margin: 1em 0 .6em 0;
 	padding: 0 0 0 20px;
     font-weight: normal;
-    color: black;
+    color: #003366;
     position: relative;
     font-size: 18.72px;
     line-height: 37px;
