@@ -246,6 +246,10 @@ pre {
     word-wrap: break-word;
 }
 
+.article-link {
+    font-size: 1em;
+}
+
 .article-metadata {
     font-size: 0.8em;}
 
@@ -306,7 +310,7 @@ pre {
         line-height: 1.6;
     }
     .article-metadata {
-        font-size: 0.8em;}
+        font-size: 1.2em;}
     .nav-bar li a {
         font-size: 1.5em;
     }
@@ -317,6 +321,9 @@ pre {
     p {
         font-size:1.5em;
     }
+    .article-link {
+    font-size: 1.8em;
+}
 
 } 
 

@@ -10,7 +10,7 @@
 		{{ range .Pages.ByPublishDate.Reverse }}
 		<!-- Posts -->
 		{{ if eq .Params.type "post" }}
-			<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+			<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
 			{{ if in (string .Site.BaseURL) "localhost" }}
 			{{if .Params.draft }}
 			<div class="status-box draft">Draft</div>
@@ -24,18 +24,18 @@
 
 		<!-- Notes -->
 		{{ if eq .Params.type "note" }}
-		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+		<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
 		<div class="list-article-summary">{{ .Summary }}</div>
 		{{ end }}
 
 		{{ if eq .Params.type "video" }}
-		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+		<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
 		<div class="list-article-summary">{{ .Summary }}</div>
 		{{ end }}
 		
 		<!-- Links -->
 		{{ if eq .Params.type "link" }}
-		<div class="list-article-title"><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></div>
+		<a class="article-link" href="{{ .Params.link }}">{{ .Title }}</a>
 		<div class="list-article-summary">{{ .Summary }}</div>
 		{{ end }}
 		
@@ -43,7 +43,7 @@
 		<div class="images-columns">
 		{{ if eq .Params.type "photo" }}
 		
-		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
+		<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
 			<div class="list-article-summary"><p>{{ .Summary }}</p></div>
 			<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
 			<div class="list-article-img"><a href="{{ .Permalink }}"><img src="/images/thumbnails/{{ .Params.photo }}"></a></div>
