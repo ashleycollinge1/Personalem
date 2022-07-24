@@ -18,7 +18,6 @@
 			<div class="status-box published">Published</div>
 			{{ end }}
 			{{ end }}
-			<br />
 			<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
 			<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 		{{ end }}
@@ -39,10 +38,10 @@
 		<div class="images-columns">
 		{{ if eq .Params.type "photo" }}
 		
-		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
+		<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
 			<div class="list-article-summary"><p>{{ .Summary }}</p></div>
 			<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
-			<div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div>
+			<div class="list-article-img"><a href="{{ .Permalink }}"><img src="/images/thumbnails/{{ .Params.photo }}"></a></div>
 		
 		{{ end }}
 	</div>
