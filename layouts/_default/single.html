@@ -20,6 +20,23 @@
 		</div>
 
 		{{- partial "sidebar.html" . -}}{{ .Content }}
+
+		{{ if and (isset .Params "image") .Params.image }}
+			{{ $image := .Page.Resources.GetMatch .Params.image }}
+			{{ with $image }}
+				{{ $thumb := .Resize "1000x" }}
+				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image"></center>` $thumb.RelPermalink .Title | safeHTML }}
+			{{end}}
+		{{ end }}
+		<br />
+		{{ if eq .Params.type "photo" }}
+					Camera: {{ .Params.camera }} <br />
+					Resolution: {{ .Params.resolution }}<br />
+					Exposure Time: {{ .Params.exposuretime }}<br />
+					Focal Length: {{ .Params.focallength }}<br />
+					F/stop: {{ .Params.fstop }}<br />
+					ISO: {{ .Params.ISO }}<br />
+				{{ end }}
 	</div>
 </div>
 	
