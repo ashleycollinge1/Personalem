@@ -25,7 +25,7 @@
 			{{ $image := .Page.Resources.GetMatch .Params.image }}
 			{{ with $image }}
 				{{ $thumb := .Resize "1000x" }}
-				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image"></center>` $thumb.RelPermalink .Title | safeHTML }}
+				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
 			{{end}}
 		{{ end }}
 		<br />
