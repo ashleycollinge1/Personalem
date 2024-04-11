@@ -14,9 +14,16 @@
         </p>
         
         {{ if eq .Params.type "photo" }}
+        {{ $image := .Page.Resources.GetMatch .Params.image }}
+
         <div class="row">
             <div class="col-6 force-col-6">
-                <a href="{{ .RelPermalink }}"><img height=100 width=150 src="/images/thumbnails/{{ .Params.photo }}" alt="{{ .Summary }}"></a>
+                <a href="{{ .RelPermalink }}">
+                {{ with $image }}
+                {{ $thumb := .Resize "1000x" }}
+                {{ printf `<center><img src="%s" height=100 width=150 alt="%s" class="img-responsive gallery-image"></center>` $thumb.RelPermalink .Title | safeHTML }}
+            {{end}}
+        </a>
             </div>
             <div class="col-6 force-col-6">
                 {{ if eq .Params.type "photo" }}
