@@ -21,8 +21,8 @@
 <br />
 		{{- partial "sidebar.html" . -}}{{ .Content }}
 
-		{{ if and (isset .Params "image") .Params.image }}
-			{{ $image := .Page.Resources.GetMatch .Params.image }}
+		{{ if and (isset .Params "photo") .Params.photo }}
+			{{ $image := .Page.Resources.GetMatch .Params.photo }}
 			{{ with $image }}
 				{{ $thumb := .Resize "1000x" }}
 				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}

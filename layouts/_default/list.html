@@ -46,7 +46,15 @@
 		<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
 			<div class="list-article-summary"><p>{{ .Summary }}</p></div>
 			<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
-			<div class="list-article-img"><a href="{{ .Permalink }}"><img src="/images/thumbnails/{{ .Params.photo }}"></a></div>
+			<div class="list-article-img"><a href="{{ .Permalink }}">
+			{{ if and (isset .Params "photo") .Params.photo }}
+			{{ $image := .Page.Resources.GetMatch .Params.photo }}
+			{{ with $image }}
+				{{ $thumb := .Resize "1000x" }}
+				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
+			{{end}}
+		{{ end }}
+	</a></div>
 		
 		{{ end }}
 	</div>
