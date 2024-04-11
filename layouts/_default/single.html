@@ -18,7 +18,7 @@
 		<div class="article-metadata">
 			{{ partial "metadata.html" . }}
 		</div>
-
+<br />
 		{{- partial "sidebar.html" . -}}{{ .Content }}
 
 		{{ if and (isset .Params "image") .Params.image }}
