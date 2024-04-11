@@ -15,11 +15,9 @@
 
 <div class="row">
 	<div class="col-12 cv-content-style">
-		<div class="article-metadata">
-			{{ partial "metadata.html" . }}
-		</div>
-<br />
-		{{- partial "sidebar.html" . -}}{{ .Content }}
+
+
+		{{- partial "sidebar.html" . -}}
 
 		{{ if and (isset .Params "photo") .Params.photo }}
 			{{ $image := .Page.Resources.GetMatch .Params.photo }}
@@ -27,16 +25,16 @@
 				{{ $thumb := .Resize "1000x" }}
 				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
 			{{end}}
+			<div class="list-article-summary"><center><i>{{ .Summary }}</i></center></div>
+
+			{{ else }}
+			{{ .Content }}
 		{{ end }}
-		<br />
-		{{ if eq .Params.type "photo" }}
-					Camera: {{ .Params.camera }} <br />
-					Resolution: {{ .Params.resolution }}<br />
-					Exposure Time: {{ .Params.exposuretime }}<br />
-					Focal Length: {{ .Params.focallength }}<br />
-					F/stop: {{ .Params.fstop }}<br />
-					ISO: {{ .Params.ISO }}<br />
-				{{ end }}
+
+
+				<div class="article-metadata">
+			{{ partial "metadata.html" . }}
+		</div>
 	</div>
 </div>
 	

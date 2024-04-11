@@ -27,9 +27,11 @@
 	<div class="col-12 footer">
 		Content is Copyright © 2020 - 2024 Ashley Collinge<br />
 		Powered by <a href="https://gohugo.io/">Hugo</a> using the <a href="https://github.com/ashleycollinge1/Personalem">Personalem</a> theme	<br />
+		<div class="git-info">
 		{{ with .GitInfo }}
 			Git Hash: {{ .AbbreviatedHash }} | Git Author: {{ .AuthorName }} | Commit Date: {{ .CommitDate.Format "02-01-2006" }} | Commit Subject: {{ .Subject }}
 		{{ end }}
+	</div>
 
 	</div>
 </div>

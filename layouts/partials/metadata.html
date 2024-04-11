@@ -1,5 +1,5 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "2 Jan, 2006" }}
 <i data-feather="calendar"></i>
 <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
 {{ with .Params.tags }}
@@ -9,7 +9,19 @@
 <a href="{{ $href }}/">{{ . }}</a>
 {{ end }}
 {{ end }}
+{{ if eq .Params.type "photo" }}
+<br />
+Camera: {{ .Params.camera }} <br />
+Resolution: {{ .Params.resolution }}<br />
+Exposure Time: {{ .Params.exposuretime }}<br />
+Focal Length: {{ .Params.focallength }}<br />
+F/stop: {{ .Params.fstop }}<br />
+ISO: {{ .Params.ISO }}<br />
+
+
+{{ else }}
 {{ $readTime := mul (div (countwords .Content) 220.0) 60 }}
 <br />
 Reading time: {{ math.Floor (div $readTime 60) }} minutes and
     {{ mod $readTime 60 }} seconds.
+    {{ end }}

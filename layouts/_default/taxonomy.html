@@ -6,13 +6,12 @@
 	</div>
 </div>
 
-<div class="main-content">
-	
-	<div class="article-title">{{ .Title }}</div><br />
+<div class="row">
+	<div class="col-12 recent-post">
 						{{ range .Pages.ByPublishDate.Reverse }}
 						<!-- Posts -->
 						{{ if eq .Params.type "post" }}
-							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
+							<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div>
 							<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
 							<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 						{{ end }}
@@ -21,16 +20,24 @@
 						<!-- Photos -->
 						<div class="images-columns">
 						{{ if eq .Params.type "photo" }}
-						
-						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</a></div><br />
-							<div class="list-article-summary"><p>{{ .Summary }}</p></div>
+						{{ $image := .Page.Resources.GetMatch .Params.photo }}
+						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</div><br />
+						<div class="list-article-img">
+							{{ with $image }}
+							{{ $thumb := .Resize "1000x" }}
+							{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
+						{{end}}
+							</div>
+						</a>
+							<div class="list-article-summary"><center><i>{{ .Summary }}</i></center></div>
 							<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
-							<!-- <div class="list-article-img"><img src="/images/thumbnails/{{ .Params.photo }}"></div> -->
+
 						
 						{{ end }}
 					</div>
 						<br />
 						{{ end }}
-						{{- partial "recent-items.html" . -}}
+					</div>		
 </div>		
+{{- partial "recent-items.html" . -}}
 {{ end }}

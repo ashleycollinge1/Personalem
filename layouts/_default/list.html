@@ -44,7 +44,8 @@
 		{{ if eq .Params.type "photo" }}
 		
 		<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
-			<div class="list-article-summary"><p>{{ .Summary }}</p></div>
+<br />
+<br />
 			<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
 			<div class="list-article-img"><a href="{{ .Permalink }}">
 			{{ if and (isset .Params "photo") .Params.photo }}
@@ -55,7 +56,8 @@
 			{{end}}
 		{{ end }}
 	</a></div>
-		
+	<div class="list-article-summary"><i><center>{{ .Summary }}</center></i></div>
+	<div class="article-metadata">{{ partial "metadata.html" . }}</div>
 		{{ end }}
 	</div>
 		<br />
