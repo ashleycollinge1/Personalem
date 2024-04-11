@@ -14,7 +14,7 @@
         </p>
         
         {{ if eq .Params.type "photo" }}
-        {{ $image := .Page.Resources.GetMatch .Params.image }}
+        {{ $image := .Page.Resources.GetMatch .Params.photo }}
 
         <div class="row">
             <div class="col-6 force-col-6">
