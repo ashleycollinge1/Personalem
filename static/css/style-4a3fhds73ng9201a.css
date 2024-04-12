@@ -140,6 +140,10 @@ body::-webkit-scrollbar {
     padding: 0px 10px 10px 10px;
 } 
 
+.post-photo {
+    min-height: 670px;
+}
+
 .cv-content-style h1:after,
 .cv-content-style h2:after,
 .cv-content-style h3:after {

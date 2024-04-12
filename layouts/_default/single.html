@@ -23,7 +23,7 @@
 			{{ $image := .Page.Resources.GetMatch .Params.photo }}
 			{{ with $image }}
 				{{ $thumb := .Resize "1000x webp" }}
-				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
+				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo post-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
 			{{end}}
 			<div class="list-article-summary"><center><i>{{ .Summary }}</i></center></div>
 
