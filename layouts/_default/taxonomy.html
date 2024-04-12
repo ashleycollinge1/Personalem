@@ -24,7 +24,7 @@
 						<div class="list-article-title"><a class="title" href="{{ .Permalink }}">{{ .Title }}</div><br />
 						<div class="list-article-img">
 							{{ with $image }}
-							{{ $thumb := .Resize "1000x" }}
+							{{ $thumb := .Resize "1000x webp" }}
 							{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
 						{{end}}
 							</div>

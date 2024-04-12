@@ -11,7 +11,7 @@
 					<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}
 						{{ $image := .Page.Resources.GetMatch .Params.photo }}
 						{{ with $image }}
-							{{ $thumb := .Resize "400x" }}
+							{{ $thumb := .Resize "400x  webp" }}
 							<img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="gallery-image">
 						{{end}}
 						<i><center>{{ .Summary }}</center></i>
