@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --page-width: 100em;
+}
+
 body {
     margin: 0 auto;
     font-family: Arial;
@@ -51,6 +55,23 @@ body::-webkit-scrollbar {
 
 .face-image {
     text-align: center;
+}
+
+.container{max-width:var(--page-width); margin: auto; }
+
+.image-grid {
+    display: grid;
+    grid-template-rows: auto;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit,
+            minmax(calc(var(--page-width) / 5), 1fr));
+}
+
+.gallery-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .nav-bar ul {
@@ -276,11 +297,23 @@ pre {
     .full-photo {
         width: 100%;
     }
+    .image-grid {
+        display: grid;
+        grid-template-rows: auto;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit,
+                minmax(calc(var(--page-width) / 5), 1fr));
+    }
+
 }
 
 .git-info{
     font-size: 0.75em;
 }
+
+
 
 /*@media only screen and (min-width: 600px) {} */
 
@@ -344,9 +377,7 @@ pre {
 
 @media only screen and (min-width: 1200px) {}
 
-* {
-    box-sizing: border-box;
-}
+
 
 .text-center {
     text-align: center;

@@ -1,68 +1,81 @@
 {{ define "main" }}
-<div class="row">
-	<div class="col-12 cv-content-style">
-		<h1>{{ .Title }}</h1>
+	<div class="row">
+		<div class="col-12 cv-content-style">
+			<h1>{{ .Title }}</h1>
+		</div>
 	</div>
-</div>
+	<div class="container">
+		<div class="image-grid">
+			{{ range sort .Data.Pages "Date" "desc" }}
+				{{ if and (isset .Params "photo") .Params.photo }}
+					<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}
+						{{ $image := .Page.Resources.GetMatch .Params.photo }}
+						{{ with $image }}
+							{{ $thumb := .Resize "400x" }}
+							<img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="gallery-image">
+						{{end}}
+						<i><center>{{ .Summary }}</center></i>
+					</a>
 
-<div class="row">
-	<div class="col-12">
-		{{ range .Pages.ByPublishDate.Reverse }}
-		<!-- Posts -->
-		{{ if eq .Params.type "post" }}
-			<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
-			{{ if in (string .Site.BaseURL) "localhost" }}
-			{{if .Params.draft }}
-			<div class="status-box draft">Draft</div>
-			{{ else }}
-			<div class="status-box published">Published</div>
+				{{ end }}
 			{{ end }}
-			{{ end }}
-			<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
-			<div class="article-metadata">{{ partial "metadata.html" . }}</div>
-		{{ end }}
-
-		<!-- Notes -->
-		{{ if eq .Params.type "note" }}
-		<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
-		<div class="list-article-summary">{{ .Summary }}</div>
-		{{ end }}
-
-		{{ if eq .Params.type "video" }}
-		<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
-		<div class="list-article-summary">{{ .Summary }}</div>
-		{{ end }}
-		
-		<!-- Links -->
-		{{ if eq .Params.type "link" }}
-		<a class="article-link" href="{{ .Params.link }}">{{ .Title }}</a>
-		<div class="list-article-summary">{{ .Summary }}</div>
-		{{ end }}
-		
-		<!-- Photos -->
-		<div class="images-columns">
-		{{ if eq .Params.type "photo" }}
-		
-		<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
-<br />
-<br />
-			<!-- <a class="title" href="{{ .Permalink }}"></div></a> -->
-			<div class="list-article-img"><a href="{{ .Permalink }}">
-			{{ if and (isset .Params "photo") .Params.photo }}
-			{{ $image := .Page.Resources.GetMatch .Params.photo }}
-			{{ with $image }}
-				{{ $thumb := .Resize "1000x" }}
-				{{ printf `<center><img src="%s" alt="%s" class="img-responsive gallery-image full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
-			{{end}}
-		{{ end }}
-	</a></div>
-	<div class="list-article-summary"><i><center>{{ .Summary }}</center></i></div>
-		{{ end }}
+		</div>
 	</div>
-		<br />
-		{{ end }}
-	</div>
-</div>
+	<div class="row">
+		<div class="col-12">
+			{{ range .Pages.ByPublishDate.Reverse }}
+				<!-- Posts -->
+				{{ if eq .Params.type "post" }}
+					<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
+					{{ if in (string .Site.BaseURL) "localhost" }}
+					{{if .Params.draft }}
+					<div class="status-box draft">Draft</div>
+					{{ else }}
+					<div class="status-box published">Published</div>
+					{{ end }}
+					{{ end }}
+					<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
+					<div class="article-metadata">{{ partial "metadata.html" . }}</div>
+				{{ end }}
 
-{{- partial "recent-items.html" . -}}
+				<!-- Notes -->
+				{{ if eq .Params.type "note" }}
+				<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
+				<div class="list-article-summary">{{ .Summary }}</div>
+				{{ end }}
+
+				{{ if eq .Params.type "video" }}
+				<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
+				<div class="list-article-summary">{{ .Summary }}</div>
+				{{ end }}
+				
+				<!-- Links -->
+				{{ if eq .Params.type "link" }}
+				<a class="article-link" href="{{ .Params.link }}">{{ .Title }}</a>
+				<div class="list-article-summary">{{ .Summary }}</div>
+				{{ end }}
+				
+				<!-- Photos -->
+<!-- 
+				{{ if eq .Params.type "photo" }}
+					<a class="article-link" href="{{ .Permalink }}">{{ .Title }}</a>
+						<br />
+						<br />
+						 <a class="title" href="{{ .Permalink }}"></div></a> 
+						<div class="list-article-img"><a href="{{ .Permalink }}">
+							{{ if and (isset .Params "photo") .Params.photo }}
+								{{ $image := .Page.Resources.GetMatch .Params.photo }}
+								{{ with $image }}
+									{{ $thumb := .Resize "1000x" }}
+									{{ printf `<center><img src="%s" alt="%s" class="img-responsive full-photo"></center>` $thumb.RelPermalink .Title | safeHTML }}
+								{{end}}
+							{{ end }}
+						</div>
+					</a>
+					<div class="list-article-summary"><i><center>{{ .Summary }}</center></i></div>
+				{{ end }}-->
+			{{ end }}	<br /> 
+		</div>
+	</div>
+	{{- partial "recent-items.html" . -}}
 {{ end }}
