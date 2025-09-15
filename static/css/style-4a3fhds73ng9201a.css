@@ -141,7 +141,7 @@ body::-webkit-scrollbar {
 } 
 
 .post-photo {
-    min-height: 670px;
+    object-fit: scale-down;
 }
 
 .cv-content-style h1:after,
