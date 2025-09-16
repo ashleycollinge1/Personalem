@@ -36,6 +36,7 @@
 					{{ end }}
 					<div class="list-article-summary">{{ replace .Summary "<p></p>" "" | safeHTML }}</div>
 					<div class="article-metadata">{{ partial "metadata.html" . }}</div>
+					<br />
 				{{ end }}
 
 				<!-- Notes -->
@@ -74,7 +75,7 @@
 					</a>
 					<div class="list-article-summary"><i><center>{{ .Summary }}</center></i></div>
 				{{ end }}-->
-			{{ end }}	<br /> <br />
+			{{ end }}	<br />
 		</div>
 	</div>
 	{{- partial "recent-items.html" . -}}
