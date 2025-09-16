@@ -8,11 +8,10 @@
 
 <div class="row">
     <div class="col-12 recent-post">
-        <p><a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
             <i>{{ .PublishDate.Format "Mon, 02 Jan 2006" }}</i>
             
-        </p>
-        
+        <br />
         {{ if eq .Params.type "photo" }}
         {{ $image := .Page.Resources.GetMatch .Params.photo }}
         {{ .Summary }}
