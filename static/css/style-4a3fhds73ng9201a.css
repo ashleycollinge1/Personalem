@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root {
     --page-width: 100em;
 }
@@ -334,6 +336,7 @@ pre {
 
 @media only screen and (min-width: 768px) {
 
+
     .force-col-6 {width: 50%;}
     .site-title{
         font-size: 5em;
@@ -388,9 +391,18 @@ pre {
 } 
 
 @media only screen and (min-width: 992px) {
+    .centre-row {
+    width: 80%;
+    margin: auto;
+}
 }
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    .centre-row {
+    width: 80%;
+    margin: auto;
+}
+}
 
 
 
