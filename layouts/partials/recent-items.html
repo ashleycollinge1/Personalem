@@ -6,7 +6,7 @@
 
 {{ range first 4 (where .Site.RegularPages "Section" "in" (slice "photo" "post")) }}
 
-<div class="row">
+<div class="row centre-row">
     <div class="col-12 recent-post">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
             <i>{{ .PublishDate.Format "Mon, 02 Jan 2006" }}</i>
