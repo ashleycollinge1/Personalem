@@ -1,5 +1,5 @@
 {{ define "main" }}
-	<div class="row">
+	<div class="row centre-row">
 		<div class="col-12 cv-content-style">
 			<h1>{{ .Title }}</h1>
 		</div>
@@ -21,7 +21,7 @@
 			{{ end }}
 		</div>
 	</div>
-	<div class="row">
+	<div class="row centre-row">
 		<div class="col-12">
 			{{ range .Pages.ByPublishDate.Reverse }}
 				<!-- Posts -->

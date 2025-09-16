@@ -1,12 +1,12 @@
 {{ if and (gt .WordCount 400 ) (.Params.toc) }}
-<div class="row">
+<div class="row centre-row">
 	<div class="col-12 table-of-contents box">
 		<div class="row table-of-contents header">
 			<div class="col-12">
 				Table of Contents
 			</div>
 		</div>
-		<div class="row" style="background-color:lightgray;">
+		<div class="row centre-row" style="background-color:lightgray;">
 			<div class="col-12 table-of-contents list">
 				{{ .TableOfContents }}
 			</div>
