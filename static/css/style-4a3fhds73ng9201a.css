@@ -144,6 +144,14 @@ body::-webkit-scrollbar {
     object-fit: scale-down;
 }
 
+.sticky-navbar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
 .cv-content-style h1:after,
 .cv-content-style h2:after,
 .cv-content-style h3:after {
